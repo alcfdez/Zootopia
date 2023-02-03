@@ -1,0 +1,14 @@
+@use 'variables';
+@mixin flex($dis, $direction, $wrap, $just, $align){
+    display: $dis;
+    flex-direction: $direction;
+    flex-flow: $direction $wrap;
+    justify-content: $just;
+    align-items: $align;
+}
+
+@mixin box ($background-color, $border-radius) {
+    background-color: $background-box;
+    border-radius: $border-radius;
+    border: 3px transparent 20%;
+}
