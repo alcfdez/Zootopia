@@ -44,9 +44,6 @@ let password = ref('');
 
 <style lang="scss" scoped>
 @use "../sass/styles.scss" as *;
-main{
-  background-color: $background-box;
-}
 
     
   </style>
