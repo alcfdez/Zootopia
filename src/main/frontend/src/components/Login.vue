@@ -5,45 +5,58 @@ let password = ref('');
 
 </script>
 <template>
-  
-  
-  <main>
-  
-     <h1> {{ user }}</h1>
-     <h1>{{ password }}</h1> 
-      
-    <v-text-field
-      label = "User:"
-      :rules="rules"
-      hide-details="auto" v-model="user" >
+    <main>
+        <div class="main-box">
+        <div class="logoHeader">
+            <img src="../assets/Logo header.png" alt="zootopia logo">   
+        </div>
+    <v-text-field class="text-field"
+        label = "User:"
+        :rules="rules"
+        hide-details="auto" v-model="user" >
     </v-text-field>
 
-    <v-text-field
-      label = "Password:"
-      type="password"
-      :rules="rules"
-      hide-details="auto" v-model="password">
+    <v-text-field class="text-field"
+        label = "Password:"
+        type="password"
+        :rules="rules"
+        hide-details="auto" v-model="password">
     </v-text-field>
 
     <v-btn rounded>CONNECT</v-btn>
     <div>
-      <a href="">Forgot your password?</a>
-
-    
-
+        <a href="">Forgot your password?</a>
     </div>
-    
-      
-    
-    
-    
-    
-  </main>
+</div>
+    </main>
 </template>
 
 
 <style lang="scss" scoped>
 @use "../sass/styles.scss" as *;
 
+main{
+    width: 100%;
+    height: 900px;
+    padding-top: 10%;
+}
+.main-box{
+    @include box($background-box, $border-radius);
+    @include flex(flex, column, nowrap, center, center);
+    width: 70%;
+    margin-left: 15%;
+}
+.logoHeader{
+    display: flex;
+    justify-content: center;
+}
+
+.text-field{
+    width: 70%;
+    background-color: $background-inputs;
+    border-radius: $border-radius;
+    margin: 2%;
     
-  </style>
+}
+    
+</style>
