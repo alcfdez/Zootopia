@@ -37,11 +37,12 @@ let password = ref('');
 
 main{
     width: 100%;
-    height: 900px;
+    height: 90rem;
     padding-top: 10%;
 }
 .main-box{
-    @include box($background-box, $border-radius);
+    padding: 2vw;
+    @include box($background-box, $border-radius, $background-box-border);
     @include flex(flex, column, nowrap, center, center);
     width: 70%;
     margin-left: 15%;

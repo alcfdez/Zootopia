@@ -7,8 +7,8 @@
     align-items: $align;
 }
 
-@mixin box ($background-color, $border-radius) {
+@mixin box ($background-color, $border-radius, $background-box-border) {
     background-color: $background-color;
     border-radius: $border-radius;
-    border: 3px transparent 20%;
+    border: 10px solid $background-box-border;
 }
