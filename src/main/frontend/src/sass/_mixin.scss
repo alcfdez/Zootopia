@@ -1,4 +1,4 @@
-@use 'variables';
+@use 'variables' as *;
 @mixin flex($dis, $direction, $wrap, $just, $align){
     display: $dis;
     flex-direction: $direction;
