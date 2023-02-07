@@ -22,7 +22,14 @@ import { RouterLink, RouterView } from 'vue-router'
 
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use "../src/sass/styles.scss" as *;
+main{
+    background: $background-page;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 header {
   line-height: 1.5;
   max-height: 100vh;
