@@ -1,7 +1,8 @@
-$background-page: url( "../assets/fondoselva1.png");
+$background-page: no-repeat url( "@/assets/fondoselva1.png");
 //Color de fondo cajas
 $background-box: rgba(38, 62, 50, 0.76);
-$background-inputs: rgba(107, 157, 133, 0.38);
+$background-box-border: rgba(0, 0, 0, 0.205);
+$background-inputs: rgba(199,218,209);
 $background-buttons: rgba(107, 157, 133, 0.76);
 $background-buttons-icons: rgb(217, 217, 217);
 //Colores de separación de la tabla
@@ -9,11 +10,12 @@ $background-table-title: rgb(38, 62, 50);
 $background-table1: rgb(84, 111, 85);
 $background-table1: rgb(139, 175, 141);
 //Colores de texto
-$font-color-info: white;
+$font-color-info: #C7DAD1;
 $font-color-buttons: rgb(24, 53, 39);
 $font-color-text: black;
 //Tipografía
 $font-family: Arial, Helvetica, sans-serif; 
 //Estilo de bordes
 $border-radius: 20px;
+
 
