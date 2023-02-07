@@ -16,3 +16,16 @@
     border: 10px solid $background-box-border;
 }
 
+@mixin border($RowInit, $ColumnInit , $RowEnd, $columnEnd) {
+    grid-row-start: $RowInit;
+    grid-row-end: $RowEnd;
+    grid-column-start: $ColumnInit;
+    grid-column-end: $columnEnd;
+    border: 2px solid;
+    margin: 10px;
+  }
+  
+  @mixin gridDisplay($FirstArgument, $SecondArgument) {
+    display: grid;
+    grid-template: repeat($FirstArgument, 1fr) / repeat($SecondArgument, 1fr);
+  }
