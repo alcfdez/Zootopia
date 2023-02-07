@@ -49,11 +49,13 @@ export default {
 </script>
 
 <template>
+<div class="inputsBox">
 <v-form class="formAdd"
     ref="form"
     v-model="valid"
     lazy-validation
   >
+  
     <h1>Add new animal</h1>
     <v-text-field class="labelsInputs"
       v-model="name"
@@ -95,8 +97,7 @@ export default {
       required
     ></v-text-field>
 
-
-
+    
     <v-btn 
       :disabled="!valid"
       color="$background-buttons"
@@ -105,9 +106,8 @@ export default {
     >
       Add
     </v-btn>
-
-<div class="buttonsForm">
-    <v-btn
+    <div class="buttonsForm">
+      <v-btn
       color="$background-buttons"
       class="mr-4"
       @click="reset"
@@ -123,7 +123,8 @@ export default {
     </v-btn>
 </div>
 
-  </v-form>
+</v-form>
+</div>
 
 </template>
 
@@ -137,18 +138,29 @@ h1 {
 }
 
 .labelsInputs  {
+    width: 80%;
     border-radius: $border-radius;
     margin: 0.5em;
     background-color: $background-inputs;
 }
-
+.buttonsForm{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .buttonAdd  {
-    background-color: $background-buttons;
-    border-radius: $border-radius;
-    max-width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 60%;
+  background-color: $background-buttons;
+  border-radius: $border-radius;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cancelButton  {
+  background-color: $background-buttons;
+  border-radius: $border-radius;
+  width: 30%;
 }
 .mr-4 {
     background-color: $background-buttons;
@@ -158,24 +170,12 @@ h1 {
     align-items: center;
     justify-content: center;
 }
-.cancelButton  {
-    background-color: $background-buttons;
-    border-radius: $border-radius;
-    max-width: 40%;
-}
 
-.buttonsForm  {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-.formAdd          {
-    border-radius: $border-radius;
+.formAdd{
+    width: 70%;
+    margin-left: 15%;
     font-family: $font-family;
-    background-color: $background-box;
     padding: 1em 2em;
-    margin: 3em;
-    box-shadow: 0px 0px 20px 20px rgba(38, 62, 50, 0.76);;
+    @include box($background-box, $border-radius, $background-box-border); 
 }
 </style>

@@ -10,9 +10,11 @@ let password = ref('');
         <div class="logoHeader">
             <img src="../assets/Logo header.png" alt="zootopia logo">   
         </div>
+        <div class="text-field-box"></div>
     <v-text-field class="text-field"
         label = "User:"
         :rules="rules"
+        :counter="15"
         hide-details="auto" v-model="user" >
     </v-text-field>
 
@@ -20,6 +22,7 @@ let password = ref('');
         label = "Password:"
         type="password"
         :rules="rules"
+        :counter="15"
         hide-details="auto" v-model="password">
     </v-text-field>
 
@@ -37,19 +40,22 @@ let password = ref('');
 
 main{
     width: 100%;
-    height: 90rem;
-    padding-top: 10%;
+    height: max-content;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    text-align: center;
 }
 .main-box{
-    padding: 2vw;
+    padding: 5vw;
     @include box($background-box, $border-radius, $background-box-border);
-    @include flex(flex, column, nowrap, center, center);
     width: 70%;
     margin-left: 15%;
+
 }
 .logoHeader{
     display: flex;
     justify-content: center;
+    
 }
 
 .text-field{
@@ -57,7 +63,6 @@ main{
     background-color: $background-inputs;
     border-radius: $border-radius;
     margin: 2%;
-    
 }
     
 </style>
