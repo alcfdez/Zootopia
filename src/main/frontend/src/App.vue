@@ -4,26 +4,30 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
-
     <div class="wrapper">
-     
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
-<<<<<<< HEAD
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/dashboard">dashboard</RouterLink>
-=======
-        <RouterLink to="/AddView">Add</RouterLink>
->>>>>>> develop
-      </nav>
-    </div>
-  </header>
 
-  <RouterView />
+        <RouterLink to="/dashboard">dashboard</RouterLink>
+        <RouterLink to="/AddView">Add</RouterLink>
+      </nav>
+    </div> -->
+  </header>
+  <main>
+    <RouterView />
+  </main>
+
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use "../src/sass/styles.scss" as *;
+main{
+    background: $background-page;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 header {
   line-height: 1.5;
   max-height: 100vh;
