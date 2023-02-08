@@ -10,7 +10,9 @@ import FormTable from '../components/FormTable.vue';
       </div>
     <div class="container">
       <dashboardAside />
+      <div class="form">
       <FormTable/>
+      </div>
     </div>
   
     </main>
@@ -29,8 +31,14 @@ import FormTable from '../components/FormTable.vue';
         }
     
         .container{
-          display: flex;
-          flex-direction: row;
+        padding-top: 5em;
+        padding-left: 5em;
+        display: flex;
+
+            .form{
+                width: 100%;
+            }
+    
         }
   }
 </style>

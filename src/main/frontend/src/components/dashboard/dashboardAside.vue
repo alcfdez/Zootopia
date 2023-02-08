@@ -211,7 +211,7 @@ const ShotDisconnect = ()=>{
 
 @mixin gridDisplay($FirstArgument, $SecondArgument) {
   display: grid;
-  grid-template: repeat($FirstArgument, 1fr) / repeat($SecondArgument, 1fr);
+  grid-template: repeat($FirstArgument, 1fr) / repeat($SecondArgument, 2fr);
 }
 *{
     margin: 0;
@@ -232,6 +232,9 @@ const ShotDisconnect = ()=>{
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        & a:visited{
+          color:$font-color-text;
+        }
         @include border(1, 1, 1, 1)
     }
     .create-shot{
@@ -242,7 +245,9 @@ const ShotDisconnect = ()=>{
         justify-content: center;
         align-items: center;
         font-size: 1.5em;
-
+        & a:visited{
+          color:$font-color-text;
+        }
         @include border(2, 1, 3, 1)
 }
 
