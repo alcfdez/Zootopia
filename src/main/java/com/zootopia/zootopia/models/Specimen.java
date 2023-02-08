@@ -20,7 +20,7 @@ public class Specimen {
     @Column(nullable = false)
     public LocalDate entryDate; 
     @OneToOne
-    private TypeSpecimen typespecimen;
+    private Clasification clasification;
     @OneToOne
     private Gender gender;
     public Specimen() {

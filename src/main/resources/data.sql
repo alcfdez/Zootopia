@@ -6,5 +6,3 @@ INSERT INTO families VALUES (default, 'canidos')
 INSERT INTO families VALUES (default, 'reptiles')
 INSERT INTO families VALUES (default, 'mustelids')
 INSERT INTO families VALUES (default, 'leporidae')
-
-
