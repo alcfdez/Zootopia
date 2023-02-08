@@ -23,7 +23,8 @@ import Header from '../components/Header.vue';
   }
 
     .header {
-      margin: 30px;    
+      padding-top: 30px;
+      margin: 0 auto;    
     }
 
     
