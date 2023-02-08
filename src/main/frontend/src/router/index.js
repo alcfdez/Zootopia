@@ -10,6 +10,14 @@ const router = createRouter({
       component: HomeView
     },
     {
+      path: '/Formularies',
+      name: 'Formularies',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/Formularies.vue')
+    },
+    {
       path: '/AddView',
       name: 'AddView',
       // route level code-splitting

@@ -11,15 +11,15 @@ export default {
       emailRules: [
         v => !!v || 'E-mail is required',
         v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
-    ],
-    select1: null,
-    family: [
-      'Felines',
-      'Canids',
-      'Reptiles',
-      'Mustelids',
-      'Leporidae',
-    ],
+      ],
+      select1: null,
+      family: [
+        'Felines',
+        'Canids',
+        'Reptiles',
+        'Mustelids',
+        'Leporidae',
+      ],
       select2: null,
       types: [
         'Tiger',
@@ -56,22 +56,22 @@ export default {
     lazy-validation
   >
   
-    <h1>Add new animal</h1>
+    <h1>Modify the animal</h1>
     <v-text-field class="labelsInputs"
       v-model="name"
       :counter="15"
       :rules="nameRules"
       label="Name"
       required
-    ></v-text-field>
+      ></v-text-field>
 
-    <v-select class="labelsInputs"
-      v-model="select2"
-      :items="family"
-      :rules="[v => !!v || 'Item is required']"
-      label="Family"
-      required
-    ></v-select>
+      <v-select class="labelsInputs"
+        v-model="select2"
+        :items="family"
+        :rules="[v => !!v || 'Item is required']"
+        label="Family"
+        required
+      ></v-select>
 
     <v-select class="labelsInputs"
       v-model="select1"

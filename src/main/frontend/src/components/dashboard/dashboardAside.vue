@@ -56,14 +56,14 @@ const ShotDisconnect = ()=>{
     box-sizing: border-box;
 }
 .aside-bar{
-    @include box($background-box, $border-radius);
+    @include box($background-box, $border-radius, $background-box);
     border: 1px solid;
     width: 25%;
     height: 100vh;
     @include gridDisplay(10, 1);
 
     .list-shot{
-        @include box($background-buttons-icons, $border-radius);
+        @include box($background-buttons-icons, $border-radius, $background-box);
         width: 90%;
         display: flex;
         flex-direction: row;
@@ -72,7 +72,7 @@ const ShotDisconnect = ()=>{
         @include border(1, 1, 1, 1)
     }
     .create-shot{
-        @include box($background-buttons-icons, $border-radius);
+        @include box($background-buttons-icons, $border-radius, $background-box);
         width: 90%;
         display: flex;
         flex-direction: row;
@@ -81,7 +81,7 @@ const ShotDisconnect = ()=>{
         @include border(2, 1, 3, 1)
     }
     .number-specimens{
-        @include box($background-buttons-icons, $border-radius);
+        @include box($background-buttons-icons, $border-radius,  $background-box);
         width: 90%;
         display: flex;
         flex-direction: row;
@@ -90,7 +90,7 @@ const ShotDisconnect = ()=>{
         @include border(6, 1, 7, 1)
     }
     .disconnect-shot{
-        @include box($background-buttons-icons, $border-radius);
+        @include box($background-buttons-icons, $border-radius,  $background-box);
         width: 90%;
         display: flex;
         flex-direction: row;
