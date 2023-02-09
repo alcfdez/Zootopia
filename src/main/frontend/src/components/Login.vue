@@ -1,10 +1,10 @@
 <script setup>
+import { ref } from "vue";
 
 const shotList = ()=>{
 
 router.push({name: 'list',path:'/dashoard/list'})
 }
-import { ref } from "vue";
 let user = ref("");
 let password = ref("");
 </script>
