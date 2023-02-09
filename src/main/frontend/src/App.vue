@@ -7,10 +7,7 @@
 
 <template>
   <main>
-   
 
-
-    
     <RouterView />
   </main>
 
