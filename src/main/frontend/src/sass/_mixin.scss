@@ -22,7 +22,7 @@
     grid-column-start: $ColumnInit;
     grid-column-end: $columnEnd;
     border: 2px solid;
-    margin: 10px;
+    margin: 2em;
   }
   
   @mixin gridDisplay($FirstArgument, $SecondArgument) {
