@@ -7,21 +7,22 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
+
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "speciemns")
+@Table(name = "specimens")
 public class Specimen {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Column(name = "id_specimen")
     private Long id;
     @Column(nullable = false)
     private String name;
     @Column(nullable = false)
-    public LocalDate entryDate; 
-    @OneToOne
+    private LocalDate entryDate; 
+    @ManyToOne
     private Clasification clasification;
-    @OneToOne
+    @ManyToOne
     private Gender gender;
     public Specimen() {
     }
@@ -30,6 +31,7 @@ public class Specimen {
         this.name = name;
         this.entryDate = entryDate;
     }
+
     public Long getId() {
         return id;
     }
@@ -47,6 +49,18 @@ public class Specimen {
     }
     public void setEntryDate(LocalDate entryDate) {
         this.entryDate = entryDate;
+    }
+    public Clasification getClasification() {
+        return clasification;
+    }
+    public void setClasification(Clasification clasification) {
+        this.clasification = clasification;
+    }
+    public Gender getGender() {
+        return gender;
+    }
+    public void setGender(Gender gender) {
+        this.gender = gender;
     }
     
     

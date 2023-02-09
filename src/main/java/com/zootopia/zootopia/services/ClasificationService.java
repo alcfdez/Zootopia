@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+
 
 import com.zootopia.zootopia.models.Clasification;
 import com.zootopia.zootopia.repositories.ClasificationRepository;
@@ -21,7 +21,7 @@ public class ClasificationService {
 
         return repository.findAll();
     }
-    public List<Clasification> getTypes(Long id){
+    /* public List<Clasification> getTypes(Long id){
         List<Clasification> listAll = repository.findAll();
         List<Clasification> resultList = new ArrayList();
         for (Clasification clasification : listAll) {
@@ -30,6 +30,9 @@ public class ClasificationService {
 
 
         return resultList;
+    } */
+    public Clasification getOne(Long id){
+        return repository.findById(id).orElse(null);
     }
     
 }

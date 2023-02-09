@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+
 import javax.persistence.Table;
 
 @Entity
@@ -17,8 +17,6 @@ public class TypeSpecimen {
     @Column(nullable = false, name = "type")
     private String typeAnimal;
 
-    @OneToOne
-    private Family family;
     public TypeSpecimen() {
     }
     public TypeSpecimen(Long id, String typeAnimal) {

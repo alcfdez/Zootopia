@@ -22,6 +22,7 @@ import com.zootopia.zootopia.services.SpecimenService;
 @RequestMapping(path = "/api/specimens")
 public class SpecimenController {
     private SpecimenService service;
+    
 
     public SpecimenController(SpecimenService service) {
         this.service = service;
