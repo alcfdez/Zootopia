@@ -34,9 +34,9 @@ import Pagination from "@/components/Pagination.vue";
           <tr>
                 <!-- <td>2</td> -->
                 <td>Nick Wilde</td>
-                <td>Ace Of Spades</td>
-                <td>Love Me Like A Reptile</td>              <td>Clarke/Kilmister/Taylor</td>
-                <td>0.99</td>
+                <td>Fox</td>
+                <td>Canids</td>              <td>Male</td>
+                <td>27/09/2020</td>
                 <td class="actions">
                   <a href="#" class="edit"><i class="gg-pen"></i></a>
                     <a href="" class="trash"><i class="gg-trash"></i></a>
@@ -45,10 +45,10 @@ import Pagination from "@/components/Pagination.vue";
           
           <tr>
                 <!-- <td>3</td> -->
-                <td>1944</td>
-                <td>Ace Of Spades</td>
-                <td>Shoot You In The Back</td>              <td>Clarke/Kilmister/Taylor</td>
-                <td>0.99</td>
+                <td>Officer Benjamin Clawhauser </td>
+                <td>Tiger</td>
+                <td>Félids</td>              <td>Male</td>
+                <td>08/07/2021</td>
                 <td class="actions">
                   <a href="#" class="edit"><i class="gg-pen"></i></a>
                     <a href="" class="trash"><i class="gg-trash"></i></a>
@@ -57,10 +57,10 @@ import Pagination from "@/components/Pagination.vue";
           
           <tr>
                 <!-- <td>4</td> -->
-                <td>1945</td>
-                <td>Ace Of Spades</td>
-                <td>Live To Win</td>              <td>Clarke/Kilmister/Taylor</td>
-                <td>0.99</td>
+                <td>Mayor Leodore Lionheart </td>
+                <td>Lion</td>
+                <td>Félids</td>              <td>Male</td>
+                <td>04/09/2022</td>
                 <td class="actions">
                   <a href="#" class="edit"><i class="gg-pen"></i></a>
                     <a href="" class="trash"><i class="gg-trash"></i></a>
@@ -69,10 +69,10 @@ import Pagination from "@/components/Pagination.vue";
           
           <tr>
                 <!-- <td>5</td> -->
-                <td>1946</td>
-                <td>Ace Of Spades</td>
-                <td>Fast And Loose</td>              <td>Clarke/Kilmister/Taylor</td>
-                <td>0.99</td>
+                <td>Mr. Big </td>
+                <td>American badger</td>
+                <td>Mustelids</td>              <td>Male</td>
+                <td>07/10/2021</td>
                 <td class="actions">
                   <a href="#" class="edit"><i class="gg-pen"></i></a>
                     <a href="" class="trash"><i class="gg-trash"></i></a>
