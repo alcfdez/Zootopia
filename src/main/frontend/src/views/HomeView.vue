@@ -8,7 +8,6 @@ import LoginVue from "../components/Login.vue";
 <template>
   <main> 
     <LoginVue></LoginVue>
-    <SpecimentList></SpecimentList>
 
   </main>
   
