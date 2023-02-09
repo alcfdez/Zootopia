@@ -1,5 +1,15 @@
 <script setup>
 import Pagination from "@/components/Pagination.vue";
+import { specimenStore } from "../../stores/SpecimenStore";
+import { onBeforeMount } from "vue";
+
+
+const specimenstore = specimenStore();
+onBeforeMount(() => {
+  specimenstore.Asign();
+  console.log(specimenstore.specimens);
+})
+
 </script>
 <template>
 <div class="wrapper-specimen-list">
@@ -31,53 +41,7 @@ import Pagination from "@/components/Pagination.vue";
                 </td>
             </tr>
           
-          <tr>
-                <!-- <td>2</td> -->
-                <td>Nick Wilde</td>
-                <td>Fox</td>
-                <td>Canids</td>              <td>Male</td>
-                <td>27/09/2020</td>
-                <td class="actions">
-                  <a href="#" class="edit"><i class="gg-pen"></i></a>
-                    <a href="" class="trash"><i class="gg-trash"></i></a>
-                </td>
-            </tr>
           
-          <tr>
-                <!-- <td>3</td> -->
-                <td>Officer Benjamin Clawhauser </td>
-                <td>Tiger</td>
-                <td>Félids</td>              <td>Male</td>
-                <td>08/07/2021</td>
-                <td class="actions">
-                  <a href="#" class="edit"><i class="gg-pen"></i></a>
-                    <a href="" class="trash"><i class="gg-trash"></i></a>
-                </td>
-            </tr>
-          
-          <tr>
-                <!-- <td>4</td> -->
-                <td>Mayor Leodore Lionheart </td>
-                <td>Lion</td>
-                <td>Félids</td>              <td>Male</td>
-                <td>04/09/2022</td>
-                <td class="actions">
-                  <a href="#" class="edit"><i class="gg-pen"></i></a>
-                    <a href="" class="trash"><i class="gg-trash"></i></a>
-                </td>
-            </tr>
-          
-          <tr>
-                <!-- <td>5</td> -->
-                <td>Mr. Big </td>
-                <td>American badger</td>
-                <td>Mustelids</td>              <td>Male</td>
-                <td>07/10/2021</td>
-                <td class="actions">
-                  <a href="#" class="edit"><i class="gg-pen"></i></a>
-                    <a href="" class="trash"><i class="gg-trash"></i></a>
-                </td>
-            </tr>
            
         </tbody>
     </table>
