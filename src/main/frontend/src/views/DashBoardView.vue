@@ -12,7 +12,9 @@ import SpecimenList from '../components/dashboard/specimentList.vue';
 
   <div class="container">
     <dashboardAside />
-    <SpecimenList/>
+    <div class="specimentList">
+      <SpecimenList/>
+    </div>
   </div>
 
   </main>
@@ -33,7 +35,15 @@ import SpecimenList from '../components/dashboard/specimentList.vue';
         .container{
           display: flex;
           flex-direction: row;
+          margin-top: 5vh;
+          margin-left: 4em;
+
+            .specimentList  {
+              margin-left: 4em;
+            }
         }
+
+        
   }
 
     

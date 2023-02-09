@@ -17,4 +17,10 @@ let page = ref(1);
 <style lang="scss" scoped>
 @use "@/sass/styles.scss" as *;
 
+.text-center  {
+    background-color:$background-buttons-icons;
+    width: 55em;
+
+}
+
 </style>

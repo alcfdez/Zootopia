@@ -9,6 +9,8 @@
     "test:unit": "vitest --environment jsdom --root src/"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
     "@mdi/js": "^7.1.96",
     "pinia": "^2.0.28",
     "vue": "^3.2.45",
