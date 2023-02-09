@@ -1,4 +1,33 @@
-<script setup>
+<script>
+		 function Validar(user,pwd)
+		  {
+		   user=document.getElementById(user);
+		   pwd=document.getElementById(pwd);
+		   if(user.value=="alicia")
+			{
+			 alert("El campo Nombre esta vacio");
+			 user.focus();
+			 return false;
+			}
+		   else
+			{
+			 if(pwd.value=="alicia")
+			  {
+			   alert("El campo Passwd esta vacio");
+			   pwd.focus();
+			   return false;
+			  }
+			 else
+			  {
+			   let usuario = document.formulario.user.value;
+			   let password = document.formulario.password.value;
+			   return true;
+			  }
+			}
+		  }
+		</script>
+
+<!-- <script>
 import { ref } from "vue";
 
 const shotList = ()=>{
@@ -7,7 +36,43 @@ router.push({name: 'list',path:'/dashoard/list'})
 }
 let user = ref("");
 let password = ref("");
-</script>
+
+import { onMounted } from "vue";
+import axios from "axios";
+
+export default{
+  setup(){
+    let user = ref("");
+    let password = ref("");
+
+    const fetchData = async()=>{
+      const reponse= await axios.get
+      ()
+      user.push(...reponse.data.results);
+    };
+
+    onMounted (fetchData);
+    return{
+      user
+    };
+  }
+}
+
+function validation() {
+    let dataUser = document.querySelectorAll ("text-field")
+    let dataPassdword= document.querySelectorAll ("text-field")
+    if(dataUser == user && dataPassdword== password){
+      conectas
+    }
+  else{
+    
+  }
+    dataPassdword == password ;
+    
+  }
+
+
+</script> -->
 <template>
   <main>
     <div class="main-box">
@@ -16,6 +81,7 @@ let password = ref("");
       </div>
       <div class="text-field-box"></div>
       <v-text-field
+        id="user"
         class="text-field"
         label="User:"
         :rules="rules"
@@ -26,6 +92,7 @@ let password = ref("");
       </v-text-field>
 
       <v-text-field
+        id="psw"
         class="text-field"
         label="Password:"
         type="password"
@@ -36,7 +103,7 @@ let password = ref("");
       >
       </v-text-field>
 
-      <v-btn @click= "shotList()" rounded class="connect">CONNECT</v-btn>
+      <v-btn @click= "Validar()" rounded class="connect">CONNECT</v-btn>
       <div >
         <a class="forgot" href="">Forgot your password?</a>
       </div>
