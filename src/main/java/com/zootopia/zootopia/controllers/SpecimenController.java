@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.zootopia.zootopia.models.Specimen;
 import com.zootopia.zootopia.services.SpecimenService;
+import com.zootopia.zootopia.services.GenderService;
+import com.zootopia.zootopia.services.ClasificationService;
+import com.zootopia.zootopia.payLoads.SpecimenPayLoads;
 
 
 
@@ -22,6 +25,8 @@ import com.zootopia.zootopia.services.SpecimenService;
 @RequestMapping(path = "/api/specimens")
 public class SpecimenController {
     private SpecimenService service;
+    private GenderService genderService;
+    private ClasificationService clasificationService;
     
 
     public SpecimenController(SpecimenService service) {
@@ -35,8 +40,8 @@ public class SpecimenController {
     public Specimen getOne(@PathVariable Long id){
         return service.getOne(id);
     }
-    @PutMapping
-    public ResponseEntity<Object> update(@PathVariable Long id, @RequestBody Specimen specimen){
+    @PutMapping(path = "/{id}")
+    public ResponseEntity<Object> update(@PathVariable Long id, @RequestBody SpecimenPayLoads specimen){
         Specimen specimenTemporal = service.getOne(id);
         try {
             if(specimenTemporal != null){
@@ -50,8 +55,9 @@ public class SpecimenController {
         }
     }
     @PostMapping(path = "")
-    public void save(@RequestBody Specimen specimen){
-        service.save(specimen);
+    public void save(@RequestBody SpecimenPayLoads specimen){
+
+        service.save(specimen); 
     }
     @DeleteMapping(path = "/{id}")
     public List<Specimen> delete(@PathVariable Long id){

@@ -19,5 +19,7 @@ public class GenderService {
         return service.findAll();
     }
 
-    
+    public Gender getOne(Long id){
+        return service.findById(id).orElse(null);
+    }
 }

@@ -62,4 +62,4 @@ INSERT INTO clasifications VALUES (default, 5, 21)
 
 INSERT INTO countries VALUES (default, 'camboya')
 
-
+INSERT INTO specimens VALUES (default,'2020-10-10', 'carlos',  1, 1)

@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+
 import javax.persistence.Table;
 
 @Entity
@@ -26,10 +27,12 @@ public class Specimen {
     private Gender gender;
     public Specimen() {
     }
-    public Specimen(Long id, String name, LocalDate entryDate) {
+    public Specimen(Long id, String name, LocalDate entryDate, Clasification clasification, Gender gender) {
         this.id = id;
         this.name = name;
         this.entryDate = entryDate;
+        this.clasification = clasification;
+        this.gender = gender;
     }
 
     public Long getId() {
