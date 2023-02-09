@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 import javax.persistence.Table;
 
 @Entity
@@ -13,8 +14,9 @@ public class TypeSpecimen {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Column(name = "id_type")
     private Long id;
-    @Column(nullable = false)
+    @Column(nullable = false, name = "type")
     private String typeAnimal;
+
     public TypeSpecimen() {
     }
     public TypeSpecimen(Long id, String typeAnimal) {
