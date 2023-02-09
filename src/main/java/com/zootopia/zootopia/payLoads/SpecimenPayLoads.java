@@ -1,40 +1,27 @@
-package com.zootopia.zootopia.models;
+package com.zootopia.zootopia.payLoads;
 
 import java.time.LocalDate;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
-
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "specimens")
-public class Specimen {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Column(name = "id_specimen")
+public class SpecimenPayLoads {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false)
     private String name;
-    @Column(nullable = false)
-    private LocalDate entryDate; 
-    @ManyToOne
-    private Clasification clasification;
-    @ManyToOne
-    private Gender gender;
-    public Specimen() {
+    private LocalDate entryDate;
+    private Long clasification;
+    private Long gender;
+    public SpecimenPayLoads() {
     }
-    public Specimen(Long id, String name, LocalDate entryDate, Clasification clasification, Gender gender) {
+    public SpecimenPayLoads(Long id,String name, LocalDate entryDate, Long clasification, Long gender) {
         this.id = id;
         this.name = name;
         this.entryDate = entryDate;
         this.clasification = clasification;
         this.gender = gender;
     }
-
     public Long getId() {
         return id;
     }
@@ -53,19 +40,19 @@ public class Specimen {
     public void setEntryDate(LocalDate entryDate) {
         this.entryDate = entryDate;
     }
-    public Clasification getClasification() {
+    public Long getClasification() {
         return clasification;
     }
-    public void setClasification(Clasification clasification) {
+    public void setClasification(Long clasification) {
         this.clasification = clasification;
     }
-    public Gender getGender() {
+    public Long getGender() {
         return gender;
     }
-    public void setGender(Gender gender) {
+    public void setGender(Long gender) {
         this.gender = gender;
     }
     
-    
 
+    
 }
