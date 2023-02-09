@@ -140,6 +140,8 @@ export default {
     @include box($background-box, $border-radius, $background-box-border); 
 }
     .inputsBox{ 
+      width: 100%;
+      margin: 0 ;
         h1 {
         color: $font-color-info;
         text-align: center;
